@@ -1,4 +1,4 @@
-# how to local server
+# how to use local server
 
 * install python3
 * check [ipaddress] using ifconfig
