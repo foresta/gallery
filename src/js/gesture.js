@@ -6,7 +6,6 @@ export default class Gesture
 {
     constructor (baseNode) {
         this.baseNode = baseNode
-
         this.initialize()
     }
 
@@ -24,6 +23,10 @@ export default class Gesture
             console.log('touchend');
         });
     }
-    
+}
+
+export class GestureHandler
+{
+    test() { console.log("handler test"); } 
 }
 

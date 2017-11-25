@@ -53,10 +53,14 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var galleryNodes = document.querySelectorAll(".gallery");
+	var galleryNodes = document.querySelectorAll(".gallery"); //import { Gesture, GestureHandler } from "./js/gesture"
+
 	Array.from(galleryNodes).forEach(function (node) {
 	    new _gesture2.default(node);
 	});
+
+	var handler = new _gesture.GestureHandler();
+	handler.test();
 
 /***/ }),
 
@@ -82,7 +86,6 @@
 	        _classCallCheck(this, Gesture);
 
 	        this.baseNode = baseNode;
-
 	        this.initialize();
 	    }
 
@@ -107,6 +110,21 @@
 	}();
 
 	exports.default = Gesture;
+
+	var GestureHandler = exports.GestureHandler = function () {
+	    function GestureHandler() {
+	        _classCallCheck(this, GestureHandler);
+	    }
+
+	    _createClass(GestureHandler, [{
+	        key: 'test',
+	        value: function test() {
+	            console.log("handler test");
+	        }
+	    }]);
+
+	    return GestureHandler;
+	}();
 
 /***/ })
 
